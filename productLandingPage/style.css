@@ -3,6 +3,11 @@ html{
 }
 *,*::after,*::before{
   box-sizing: border-box;
+  
 }
-
+body{
+  margin: 0;
+  padding: 0;
+  background-color: rgb(189, 186, 186);
+}
 

@@ -10,15 +10,56 @@
   <body>
     <div class="container">
       <header id="header">
-        <img src="https://i.imgur.com/nchT9Ps.png" alt="" class="header-logo" />
+        <img src="https://i.imgur.com/xjiD11U.png" alt="" class="header-logo" />
         <p class="header-title">TheLoveBox.ph</p>
         <nav id="nav-bar">
-          <a href="" class="nav-link">Features</a>
-          <a href="" class="nav-link">How It Works</a>
-          <a href="" class="nav-link">Products</a>
+          <a href="form" class="nav-link">Features</a>
+          <a href="video" class="nav-link">How It Works</a>
+          <a href="products" class="nav-link">Products</a>
         </nav>
       </header>
-      <main></main>
+
+      <main>
+        <form action="https://www.freecodecamp.com/email-submit" id="form">
+          <h2>Premium Japan Products Handpicked For You</h2>
+          <input
+            type="email"
+            id="email"
+            placeholder="Enter your Email Address"
+            required
+          />
+          <input type="submit" id="submit" value="GET STARTED" />
+        </form>
+        <section class="video-section">
+          <video
+            controls
+            anonymous
+            id="video"
+            type="video/webm"
+            src="https://www.youtube.com/watch?v=t8przo85Vgc&ab_channel=TauhidHasan"
+          ></video>
+        </section>
+        <section id="products">
+          <div class="product-1">
+            <img
+              src="https://rose-kaori.com/img/p/6/0/4/4/6044-large_default.jpg"
+              alt=""
+              class="product-image"
+            />
+            <p class="product-details"></p>
+            <button class="product-button" type="button">
+              <a
+                href="https://gatsby.sg/product/bodycare/body-paper/"
+                target="_blank"
+                >Check Product</a
+              >
+            </button>
+          </div>
+          <div class="product-2"></div>
+          <div class="product-3"></div>
+        </section>
+      </main>
+      <footer></footer>
     </div>
   </body>
 </html>

@@ -68,8 +68,8 @@ body{
    #nav-bar{
     padding-left: 50px;
     display: flex;
-  
-   }
+    flex-wrap: wrap;
+  }
  }
  #nav-bar a:hover{
    color: rgb(247, 109, 240);

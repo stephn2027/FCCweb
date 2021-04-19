@@ -64,9 +64,11 @@ body{
    padding-right: 0;
    
  }
- @media(max-width: 520px){
+ @media(max-width: 560px){
    #nav-bar{
-    position: relative;
+    padding-left: 50px;
+    display: flex;
+  
    }
  }
  #nav-bar a:hover{
@@ -155,7 +157,7 @@ body{
     font-weight: 500;
     color: rgb(78, 76, 76);
   }
-  #video{
+  .video{
     display: block;
     text-align: center;
     margin: 1rem;  

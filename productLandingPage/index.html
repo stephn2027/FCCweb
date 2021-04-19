@@ -13,51 +13,160 @@
         <img src="https://i.imgur.com/xjiD11U.png" alt="" class="header-logo" />
         <p class="header-title">TheLoveBox.ph</p>
         <nav id="nav-bar">
-          <a href="form" class="nav-link">Features</a>
-          <a href="video" class="nav-link">How It Works</a>
-          <a href="products" class="nav-link">Products</a>
+          <ul>
+            <li><a href="#features" class="nav-link">Features</a></li>
+            <li>
+              <a href="#video" class="nav-link">How It Works</a>
+            </li>
+            <li><a href="#products" class="nav-link">Products</a></li>
+          </ul>
         </nav>
       </header>
 
       <main>
-        <form action="https://www.freecodecamp.com/email-submit" id="form">
-          <h2>Premium Japan Products Handpicked For You</h2>
-          <input
-            type="email"
-            id="email"
-            placeholder="Enter your Email Address"
-            required
-          />
-          <input type="submit" id="submit" value="GET STARTED" />
-        </form>
-        <section class="video-section">
-          <video
-            controls
-            anonymous
-            id="video"
-            type="video/webm"
-            src="https://www.youtube.com/watch?v=t8przo85Vgc&ab_channel=TauhidHasan"
-          ></video>
-        </section>
-        <section id="products">
-          <div class="product-1">
-            <img
-              src="https://rose-kaori.com/img/p/6/0/4/4/6044-large_default.jpg"
-              alt=""
-              class="product-image"
+        <div class="form">
+          <form action="https://www.freecodecamp.com/email-submit" id="form">
+            <h2>Premium Japan Products Handpicked For You</h2>
+            <input
+              type="email"
+              id="email"
+              placeholder="Enter your Email Address"
+              required
             />
-            <p class="product-details"></p>
-            <button class="product-button" type="button">
-              <a
-                href="https://gatsby.sg/product/bodycare/body-paper/"
-                target="_blank"
-                >Check Product</a
-              >
-            </button>
-          </div>
-          <div class="product-2"></div>
-          <div class="product-3"></div>
-        </section>
+            <br />
+            <input
+              class="get-started"
+              type="submit"
+              id="submit"
+              value="GET STARTED"
+            />
+          </form>
+        </div>
+
+        <div class="content">
+          <section id="features">
+            <div class="grid">
+              <div class="icon">
+                <img
+                  src="https://i.imgur.com/nchT9Ps.png"
+                  alt="100% japan Products"
+                />
+              </div>
+              <div class="description">
+                <h3>Authenticity</h3>
+                <p>
+                  Our trombones use the shiniest brass which is sourced locally.
+                  This will increase the longevity of your purchase.
+                </p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="icon">
+                <img src="https://i.imgur.com/s0Tzxgj.png" alt="delivery" />
+              </div>
+              <div class="description">
+                <h3>Delivery</h3>
+                <p>
+                  We make sure you recieve your trombone as soon as we have
+                  finished making it. We also provide free returns if you are
+                  not satisfied.
+                </p>
+              </div>
+            </div>
+            <div class="grid">
+              <div class="icon">
+                <img src="https://i.imgur.com/iFlxuF6.png" alt="quality" />
+              </div>
+              <div class="description">
+                <h3>Quality</h3>
+                <p>
+                  For every purchase you make, we will ensure there are no
+                  damages or faults and we will check and test the pitch of your
+                  instrument.
+                </p>
+              </div>
+            </div>
+          </section>
+
+          <section id="video">
+            <iframe
+              width="560"
+              height="315"
+              src="https://www.youtube-nocookie.com/embed/t8przo85Vgc"
+              title="YouTube video player"
+              frameborder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen
+            ></iframe>
+          </section>
+          <br />
+          <h2 class="products-text">Best Sellers</h2>
+          <section id="products">
+            <br />
+
+            <div class="product">
+              <img
+                src="data:image/jpeg;base64,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"
+                alt=""
+                class="product-image"
+              />
+              <div class="product-details">
+                <h3>Meiji Almond Chocolate</h3>
+                <p>
+                  This Delicious, High-Quality Chocolate, is Japan’s
+                  Best-Selling Nut Chocolate
+                </p>
+              </div>
+              <button class="product-button" type="button">
+                <a
+                  href="https://gatsby.sg/product/bodycare/body-paper/"
+                  target="_blank"
+                  >Check Product</a
+                >
+              </button>
+            </div>
+            <div class="product">
+              <img
+                src="https://gd.image-gmkt.com/li/978/314/869314978.g_0-w_g.jpg"
+                alt=""
+                class="product-image"
+              />
+              <div class="product-details">
+                <h3>Shiseido Baby Powder Medicated Pressed</h3>
+                <p>
+                  a handy and functional pressed (compact) powder that smoothens
+                  and whitens skin by controlling skin oil excretion and
+                  covering pores.
+                </p>
+              </div>
+              <button class="product-button" type="button">
+                <a
+                  href="https://japanesetaste.com/products/shiseido-baby-powder-medicated-pressed-50g"
+                  target="_blank"
+                  >Check Product</a
+                >
+              </button>
+            </div>
+            <div class="product">
+              <img
+                src="https://rose-kaori.com/img/p/6/0/4/4/6044-large_default.jpg"
+                alt=""
+                class="product-image"
+              />
+              <div class="product-details">
+                <h3>GATSBY Body Paper</h3>
+                <p>Body Paper for Men to Cleanly Remove Sweat</p>
+              </div>
+              <button class="product-button" type="button">
+                <a
+                  href="https://gatsby.sg/product/bodycare/body-paper/"
+                  target="_blank"
+                  >Check Product</a
+                >
+              </button>
+            </div>
+          </section>
+        </div>
       </main>
       <footer></footer>
     </div>

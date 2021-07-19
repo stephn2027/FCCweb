@@ -11,6 +11,7 @@ html {
 :root {
   --color-primary: rgb(20, 237, 245);
   --color-secondary: #233d42;
+  --color-purple:  rgb(177, 3, 230);
   --color-gray: rgb(245, 245, 245);
 }
 
@@ -105,7 +106,7 @@ section.welcome {
   position: relative;
   height: 100vh;
   width: 100%;
-  background: radial-gradient(ellipse at bottom, #062e58 0%, #01030e 100%);
+  background: radial-gradient(ellipse at bottom, #1e254b 0%, #0b0029 100%);
 
   overflow: hidden;
 }
@@ -1083,4 +1084,53 @@ section.contact .submit-button:hover {
   background: var(--color-primary);
   font-weight: 500;
 }
+footer{
+  
+  position: relative;
+  padding: 5rem 0 4rem 0;
+  background: -webkit-linear-gradient( -90deg, #252133 , #352d41);
+}
+.mdi-home-page-link{
+  background: #001c2c;
+  border: 2px solid white;
+  width: 3.5rem;
+  height: 3.5rem;
+  position: absolute;
+  font-size: 3rem;
+  top: -20%;
+  left: 50%;
+  right: 50%;
+  line-height: 40pt;
+  transition: background .3s;
+  cursor: pointer;
+  border-radius: .1rem;  
+  
+}
+.mdi::before, .mdi-set {
+ display:block;
+}
+.mdi-home-page-link::before{
+  display:block;
+  content: "⇧";
+  font-size: 2.64rem;
+  text-align: center;
+  justify-content: center;
+  position: relative;
+  bottom: .1rem;
+  color: #fff;
+  background: transparent;
+
+}
+.mdi-home-page-link:hover{
+ background: var(--color-purple);
+ 
+}
+.mdi-home-page-link:hover::before{
+  bottom: .8rem;
+  content-visibility:var(--color-purple) ;
+  
+  
+  
+}
+
 

@@ -109,26 +109,93 @@ const closeButton = document.querySelector('.span-close');
 
 projs.forEach(proj=>proj.addEventListener('click',()=>{
   const img = proj.querySelector('img').src;
-  const caption = proj.querySelector('img').alt;
+  const caption = proj.querySelector('.proj-inner-text').innerHTML;
+  
   
   modal.style.display ="block";
   modalImage.src = img;
   modalText.innerHTML = caption;
+
+  
   
 
 
   const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
   const  scrollLeft = window.pageXOffset || document.documentElement.scrollLeft;
-  body.onscroll = ()=>{window.scrollTo(scrollLeft,scrollTop)}
+  window.onscroll = ()=>{window.scrollTo(scrollLeft,scrollTop)}
 
   
-}))
+}));
 closeButton.addEventListener('click',()=>{
   modal.style.display = 'none';
-  body.onscroll = function(){};
+  window.onscroll = function(){};
 });
+modalText.addEventListener('click',()=>{
+  modal.style.display ='none';
+  window.onscroll = function(){};
+
+});
+//about slide in animation/ listening for scroll event
+const about = document.querySelector('.about');
+const aboutHeader = document.querySelector('.about-header');
+const aboutHeaderBar = document.querySelector('.about-header-bar');
+
+
+function aboutSlideIn(){
+  //about.offsetHeight = 1167 height of about
+  //about.offsetTop = 976 distance from top of window
+  //window.innerHeight = 903 length of the window open
+ const slideInAt = (window.scrollY + window.innerHeight)- about.offsetHeight / 3;
+  const aboutBottom = about.offsetTop + about.offsetHeight*2;
+  const isHalfShown = slideInAt>about.offsetTop;
+  const isNotScrolledPast = window.scrollY <aboutBottom;
+
+  if(isHalfShown && isNotScrolledPast){
+    aboutHeader.classList.add('slide-in-left');
+    aboutHeaderBar.classList.add('slide-in-right');
+   
+  }else{
+    aboutHeader.classList.remove('slide-in-left');
+    aboutHeaderBar.classList.remove('slide-in-right');
+    
+  }
+
+  
+};
+
+
+window.addEventListener('scroll',aboutSlideIn);
+//projects slide in animation on scroll
+const proj = document.querySelector('.project-section');
+
+const projectHeader = document.querySelector('.projects-header');
+const projectHeaderBar = document.querySelector('.projects-header-bar');
+
+function projectSlideIn(){
+  
+ const slideInAt = (window.scrollY + window.innerHeight)- proj.offsetHeight / 3;
+  const projectBottom = proj.offsetTop + proj.offsetHeight*3;
+  const isHalfShown = slideInAt>proj.offsetTop;
+  const isNotScrolledPast = window.scrollY <projectBottom;
+
+  if(isHalfShown && isNotScrolledPast){
+    projectHeader.classList.add('slide-in-left');
+    projectHeaderBar.classList.add('slide-in-right');
+    console.log("added");
+  }else{
+    projectHeader.classList.remove('slide-in-left');
+    projectHeaderBar.classList.remove('slide-in-right');
+    console.log("removed");
+  }
+
+  
+};
+
+
+window.addEventListener('scroll',projectSlideIn);
 //form and contact animation
 const form = document.querySelector('form');
+
 const contactHeader = document.querySelector('.contact-header');
 const contactHeaderBar = document.querySelector('.contact-header-bar');
 const highlight = document.querySelector('.highlight');
@@ -140,23 +207,21 @@ const highlight = document.querySelector('.highlight');
     const slideInAt = (window.scrollY + window.innerHeight) - form.offsetHeight / 2;
         // bottom of the image
         const imageBottom = form.offsetTop + form.offsetHeight*6.3;
-        const isHalfShown = slideInAt > sliderImage.offsetTop;
+        const isHalfShown = slideInAt > form.offsetTop;
         const isNotScrolledPast = window.scrollY > imageBottom;
        
         if (isHalfShown && isNotScrolledPast) {
           form.classList.add('animated','pop-in');
-          
-          
           contactHeader.classList.add('slide-in-left');
           contactHeaderBar.classList.add('slide-in-right');
           highlight.classList.add('slide-in-right');
-          console.log("added");
+          
         } else {
           form.classList.remove('animated', 'pop-in');
-          highlight.classList.remove('slide-in-right');
           contactHeader.classList.remove('slide-in-left');
           contactHeaderBar.classList.remove('slide-in-right');
-          console.log('removed');
+          highlight.classList.remove('slide-in-right');
+          
         }
   }
 window.addEventListener('scroll',formPopIn);
@@ -207,5 +272,4 @@ document.querySelector('#close')
 });
 
   
-  //footer icon animation
   

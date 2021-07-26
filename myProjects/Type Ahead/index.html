@@ -2,44 +2,53 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
+  
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>City Search 🔍 </title>
-  <link rel="stylesheet" href="citySearch.css">
+  <link rel="stylesheet" href="style.css">
 </head>
-<form class="search-form">
-  <input type="text" class="search" placeholder="City or Province">
-  <ul class="suggestions">
-    <li>Search for a City</li>
-    <li>or Province</li>
-  </ul>
 
-</form>
 
 <body>
+  <div class="container">
+    <div class="into-text">
+      <div class="text">City Search</div>
+      <div class="text-info">Japan's city population</div>
+    </div>
+  <form class="search-form">
+    <input type="text" class="search" placeholder="City or Province">
+    <ul class="suggestions">
+      <li>Search for a City</li>
+      <li>or Province</li>
+    </ul>
+  
+  </form>
+</div>
 
 
   <script>
-    const cityList ='https://raw.githubusercontent.com/stephn2027/FCCweb/main/myProjects/Type%20Ahead/jp.json';
+    //fetching json file data
+    const cityList ="https://raw.githubusercontent.com/stephn2027/FCCweb/main/myProjects/Type%20Ahead/jp.json";
     const cities = [];
+    //storing data into cities variable storage as objects
     fetch(cityList).then(blob => blob.json()).then(data => cities.push(...data));
 
     function findMatches(wordToMatch, cities) {
       return cities.filter(place => {
-        const regex = new RegExp(wordToMatch, '?gi');
+        const regex = new RegExp(wordToMatch, 'gi');
         return place.city.match(regex) || place.admin_name.match(regex);
       })
     };
 
     function displayMatches() {
       const wordMatch = findMatches(this.value, cities);
-      console.log(this.value)
+      
       const formatted = new Intl.NumberFormat('en-US');
       const html = wordMatch.map(place => {
-        const regex = new RegExp(this.value,'?gi');
+        const regex = new RegExp(this.value,'gi');
         const cityName = place.city.replace(regex,`<span class="hl">${this.value}</span>`);
         const province = place.admin_name.replace(regex,`<span class="hl">${this.value}</span>`);
         

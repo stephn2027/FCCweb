@@ -19,13 +19,13 @@
 
 
   <script>
-    const cityList = 'https://raw.githubusercontent.com/stephn2027/Javascript30/main/jp.json';
+    const cityList ='https://raw.githubusercontent.com/stephn2027/FCCweb/main/myProjects/Type%20Ahead/jp.json';
     const cities = [];
     fetch(cityList).then(blob => blob.json()).then(data => cities.push(...data));
 
     function findMatches(wordToMatch, cities) {
       return cities.filter(place => {
-        const regex = new RegExp(wordToMatch, 'gi');
+        const regex = new RegExp(wordToMatch, '?gi');
         return place.city.match(regex) || place.admin_name.match(regex);
       })
     };
@@ -35,7 +35,7 @@
       console.log(this.value)
       const formatted = new Intl.NumberFormat('en-US');
       const html = wordMatch.map(place => {
-        const regex = new RegExp(this.value,'gi');
+        const regex = new RegExp(this.value,'?gi');
         const cityName = place.city.replace(regex,`<span class="hl">${this.value}</span>`);
         const province = place.admin_name.replace(regex,`<span class="hl">${this.value}</span>`);
         

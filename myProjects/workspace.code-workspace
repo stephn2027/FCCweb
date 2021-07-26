@@ -4,10 +4,10 @@
 			"path": "."
 		},
 		{
-			"path": "../../javascript/JS/JavaScript30/JavaScript30-master"
+			"path": "../../FCCweb/myProjects"
 		}
 	],
 	"settings": {
-		"liveServer.settings.multiRootWorkspaceName": "projects"
+		"liveServer.settings.multiRootWorkspaceName": "myProjects"
 	}
 }

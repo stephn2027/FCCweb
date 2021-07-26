@@ -232,6 +232,11 @@ body.fixed-nav nav {
 .fixed-nav nav {
   width: 100%;
   top: 0.0001rem;
+  
+}
+.fixed-nav nav li a{
+  text-align: center;
+  margin-left: 1rem;
 }
 .nav-ul > li > a {
   color: rgb(255, 255, 255);
@@ -240,7 +245,7 @@ body.fixed-nav nav {
   font-size: 1.255em;
   font-weight: 400;
   font-family:'Sunflower', sans-serif;
-  margin: 1rem;
+  margin: .4rem 1rem .4rem 1rem;
 
   display: block;
   padding: 0.1421rem 0.935rem 0.13rem 0.3rem;
@@ -333,7 +338,7 @@ li.top a {
 }
 .bio {
   display: flex;
-  width: clamp(25rem, 2.5vw, 35rem);
+  width: clamp(20rem, 2.5vw, 35rem);
   justify-content: center;
   align-items: center;
   line-height: 1.7;
@@ -468,7 +473,7 @@ section.about .container{
 }
 section.about .about-header {
   color: var(--color-secondary);
-  font-size: 3rem;
+  font-size:clamp(3rem,1vw,6rem);
   font-weight: bolder;
   text-align: center;
   justify-content: center;
@@ -487,7 +492,7 @@ section.about .about-header {
 section.about .about-header-bar{
   background: var(--color-secondary);
   margin: 1.725rem 0 3rem 0rem;
-  width: 9rem;
+  width:clamp(9rem,4vw,10rem);
   margin-top: .1rem;
   margin-bottom: 1.55rem;
   text-align:center;
@@ -497,7 +502,7 @@ section.about .about-header-bar{
 }
 .about-header-bar {
   background: #444649;
-  height: 0.325rem;
+  height: clamp(.425rem,.6vh,1rem);
   margin: 1.725rem, 0 4rem 0;
   width: 7px;
   border-radius: 0.2rem;  
@@ -523,7 +528,7 @@ section.about .about-header-bar{
     margin-left: 5rem;
   }
   .about {
-    overflow-y: scroll;
+    overflow-y: auto;
   }
   #welcome-section {
     height: 50vh;
@@ -548,10 +553,55 @@ section.about .about-header-bar{
   }
 }
 @media (max-width: 500px) {
-  .about-img {
-    padding-left: -3rem;
-    margin-left: auto;
+  .about-picture {
+    margin-left: -3rem;
+  
   }
+  section.about .container{
+    justify-items: center;
+    padding-left: 1.5rem;
+  }
+  
+}
+@media screen and (max-width:375px) {
+  .nav-ul > li > a {
+    margin: .5rem;
+    font-size: 1em;
+  }
+  section.about{
+    width: 95%;
+  }
+  .split ,.links{
+    display: block;
+    margin-left: 3rem;
+    padding-inline: 3rem;
+  }
+  .links{
+    margin-left: 0;
+    padding-inline: 1rem;
+  }
+  
+ 
+  .about-text {
+    position: relative;
+    box-sizing: border-box;
+    margin-left:2rem;
+    padding-inline: 2rem;
+    font-size: 1rem;
+    width: 90%;
+  }
+  .about-text p{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    padding-inline: 3rem;
+    width: 80%;
+  }
+  .about-img{
+    padding-left: 1.5rem ;
+  }
+  
+
 }
 .about-img {
   padding-left: -3rem;
@@ -588,7 +638,7 @@ section.about .about-header-bar{
 
 .about-picture {
   padding-top: -2rem;
-  width: clamp(70rem, 200vw, 150rem);
+  width: clamp(25rem, 120vw, 150rem);
   height: 100%;
 }
 
@@ -604,13 +654,13 @@ section.about .about-header-bar{
 .about-text {
   margin-inline: auto;
   padding-inline: min(1rem, 3rem);
-  font-size: clamp(1.25rem, 2.5vw, 5rem);
+  font-size: clamp(1.25rem, 1.5vw, 4rem);
   margin-bottom: 2rem;
   text-align: justify;
 }
 .about-text p {
   color: var(--color-secondary);
-  font-size: clamp(1.36rem, 1.25vw, 3rem);
+  font-size: clamp(1.24rem, 1.25vw, 3rem);
   font-weight: 600;
   text-align: left;
 }
@@ -619,8 +669,8 @@ section.about .about-header-bar{
 
 
 
-section .about-cont {
-  margin: 0;
+section.about-cont {
+  margin: 1.5rem;
   padding: 0;
   width: 100%;
 }
@@ -632,6 +682,7 @@ section .about-cont {
   padding-inline: 1rem;
   flex-wrap: wrap;
   width: 100%;
+  margin-left: -1.3rem;
   
 }
 .about-components div {
@@ -640,7 +691,7 @@ section .about-cont {
   padding-bottom: 2rem;
   margin-inline: .1rem;
   flex: 1;
-  max-block-size: 27em;
+  max-block-size: 26em;
   background: rgba(163, 163, 161, 0.1) ;
   border: rgba(59, 59, 58, 0.1) 1px solid;
   height: min(25rem,28rem);
@@ -781,7 +832,7 @@ section.project-section .projects-header-bar{
 }
 .projects-header-bar {
   background: #444649;
-  height: 0.325rem;
+  height: 0.425rem;
   margin: 1.725rem, 0 4rem 0;
   width: 7px;
   border-radius: 0.2rem;  
@@ -822,7 +873,7 @@ section.project-section .projects-header-bar{
   transition: 0.5s ease;
   opacity: 0;
   position: absolute;
-  top: 50%;
+  top: 70%;
   left: 50%;
 
   transform: translate(-50%, -50%);
@@ -831,13 +882,17 @@ section.project-section .projects-header-bar{
 .proj-text .proj-inner-text {
   background-color: rgba(196, 18, 212, 0.6);
   color: var(--color-secondary);
-  font-size: 1.5vh;
+  font-size: clamp(1rem,1.5vw,3rem);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  font-weight: bolder;
   padding: .3rem;
   text-align: center;
-  border-radius: 0.5rem;
+  justify-content: end;
+  border-radius: 0.2rem;
   box-shadow: 0.1rem -0.1rem 0.6rem 0.1rem rgb(238, 232, 232);
   cursor: pointer;
   animation: none;
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, transform 0.3s;
 }
 
 
@@ -863,11 +918,27 @@ section.project-section .projects-header-bar{
 }
 
 .proj:hover .proj-image {
-  opacity: 0.2;
+  opacity: .2;
+  
 }
-.proj:hover .proj-text {
-  opacity: 1;
-  c
+.proj:hover .proj-text{
+  
+  animation: slideFromBottom .4s ease both;
+ 
+}
+@keyframes slideFromBottom {
+0%{
+  opacity: 0;
+    transform: translateY(0%) ;
+  }
+  50%{
+    opacity: 0;
+    transform: translate(-50%,100%);
+  }
+  100%{
+    
+    opacity: 1;
+  }  
 }
 /* modal */
 .modal {
@@ -897,14 +968,19 @@ section.project-section .projects-header-bar{
   margin: auto;
   display: block;
   width: 95%;
-  
-  font-size: 3rem;
+  padding-block: .3rem;
+  font-size:clamp(2rem,2.5vw,4rem);
   text-align: center;
   justify-content: center;
   align-items: center;
   color: rgb(255, 255, 255);
   background-color: var(--color-secondary);
  
+}
+.caption a{
+color: rgb(248, 246, 246);
+font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+font-weight: bolder;
 }
 .modal .modal-content,.caption{
   animation:zoom .6s ease-in;
@@ -945,6 +1021,10 @@ section.project-section .projects-header-bar{
   text-decoration: none;
   cursor: pointer;
 }
+.caption a:hover{
+  color: #09e1f5;
+}
+
 
 /* 100% Image Width on Smaller Screens */
 @media only screen and (max-width: 700px) {
@@ -962,9 +1042,10 @@ section.project-section .projects-header-bar{
 section.contact {
   margin-top: -2rem;
   width: 100%;
-  height: 50rem;
+  height: max-content;
   background-image: url(footer-bg.jpg);
   background-size: 100% 100%;
+  padding-bottom: 4rem;
 }
 .contact {
   display: block;
@@ -1237,8 +1318,9 @@ section.contact .submit-button:hover {
   border: none;
 }
 footer {
+  height: min-content;
   position: relative;
-  padding: 4rem 0 3rem 0;
+  padding: 4rem 0 2rem 0;
   background: -webkit-linear-gradient(-90deg, #252133, #352d41);
 }
 

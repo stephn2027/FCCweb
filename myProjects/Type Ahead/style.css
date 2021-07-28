@@ -1,63 +1,23 @@
 html {
   box-sizing: border-box;
-  background: url(images/wallpaperflare.com_wallpaper\ \(1\).jpg) center;
-  background-size: auto;
-  font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 1.6rem;
-  font-weight: 200;
-  
+  background: rgb(38, 22, 70);
+  font-family: 'helvetica neue';
+  font-size:  20px;
+  font-weight: 200; 
 }
 
-*,
-*:before,
-*:after {
+*, *:before, *:after {
   box-sizing: inherit;
 }
-.container {
-  overflow: hidden;
-  height: 50rem;
-}
-input {
+input{
   width: 100%;
   padding: 20px;
 }
-.intro-text {
-  color: #ffffff;
-  line-height: 1.6;
-  text-align: center;
-  display: block;
-  margin: 1em;
-  padding: 1em;
-  
-  -webkit-text-stroke: .01rem blueviolet;
-  
+.search-form{
+max-width: 400px;
+margin: 50px auto;
 }
-.text h1 {
-  text-align: center;
-  font-family: 'Kanit', sans-serif;
-  font-size: 3.5rem;
-  line-height: 95%;
-  margin-bottom: 1rem;
-  text-shadow: 1px 0px 1px rgba(255, 255, 255, 0.3);
-  -webkit-text-stroke: 0.1rem rgba(2, 2, 2, 0.5);
-  -webkit-text-fill-color: rgb(255, 255, 255);
-}
-.text-info{
-  font-size: 2.6em;
-  display: inline-flex;
-  padding-bottom: 2rem;
-  font-family: 'Caveat', cursive;
-  -webkit-text-fill-color: rgb(230, 226, 13);
-  -webkit-text-stroke: .04rem rgb(253, 249, 7);
-  line-height: 1;
-  text-shadow: 1px 1px 1px darkgoldenrod;
-
-}
-.search-form {
-  width:clamp(10rem,500px,80%);
-  margin: 10px auto;
-}
-input.search {
+input.search{
   margin: 0;
   text-align: center;
   outline: 0;
@@ -72,12 +32,12 @@ input.search {
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.12), inset 0 0 2px rgba(0, 0, 0, 0.19);
 }
 
-.suggestions {
+.suggestions{
   margin: 0;
   padding: 0;
   position: relative;
 }
-.suggestions li {
+.suggestions li{
   background: seashell;
   list-style: none;
   padding: 20px;
@@ -89,17 +49,20 @@ input.search {
   justify-content: space-between;
   text-transform: capitalize;
 }
-.suggestions li:nth-child(even) {
-  transform: perspective(100px) rotateX(3deg) translateY(2px) scale(1.001);
-  background: linear-gradient(to bottom, #ffffff 0%, #d4d2d2 100%);
+.suggestions li:nth-child(even){
+  transform: perspective(100px)rotateX(3deg)translateY(2px) scale(1.001);
+  background: linear-gradient(to bottom, #ffffff 0%,#d4d2d2 100%);
 }
-.suggestions li:nth-child(odd) {
-  transform: perspective(100px) rotateX(-3deg) translateY(3px);
-  background: linear-gradient(to top, #fffbfb 0%, #d4d4d2 100%);
+.suggestions li:nth-child(odd){
+  transform: perspective(100px)rotateX(-3deg)translateY(3px);
+  background: linear-gradient(to top, #fffbfb 0%,#d4d4d2 100%);
+
 }
-span.population {
+span.population{
   font-size: 15px;
 }
-.hl {
-  background: rgba(213, 63, 240, 0.959);
+.hl{
+  background:rgba(173, 54, 241, 0.959);
 }
+
+

@@ -114,7 +114,7 @@ projs.forEach(proj=>proj.addEventListener('click',()=>{
   
   modal.style.display ="block";
   modalImage.src = img;
-  modalText.innerHTML = caption;
+  modalText.innerHTML = `click to visit <br> ${caption}`;
 
   
   

@@ -9,14 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>City Search 🔍 </title>
   <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
+  
   <div class="container">
-    <div class="into-text">
-      <div class="text">City Search</div>
-      <div class="text-info">Japan's city population</div>
+    <div class="intro-text">
+      <div class="text">City Population Search</div>
+      <div class="text-info">Japan Cities</div>
     </div>
   <form class="search-form">
     <input type="text" class="search" placeholder="City or Province">
@@ -31,7 +35,7 @@
 
   <script>
     //fetching json file data
-    const cityList ="https://raw.githubusercontent.com/stephn2027/FCCweb/main/myProjects/Type%20Ahead/jp.json";
+    const cityList ="https://raw.githubusercontent.com/stephn2027/FCCweb/main/myProjects/citySearch/jp.json";
     const cities = [];
     //storing data into cities variable storage as objects
     fetch(cityList).then(blob => blob.json()).then(data => cities.push(...data));

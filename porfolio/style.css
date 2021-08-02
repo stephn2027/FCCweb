@@ -951,8 +951,8 @@ section.project-section .projects-header-bar{
   position: fixed;
   z-index: 2;
   padding-top: 8rem;
-  width: clamp(20%,90%,70rem);
-  height: clamp(30%,70%,60rem);
+  width: clamp(20rem,85%,70rem);
+  height: clamp(10rem,65%,50rem);
   top: 50%;
   left: 50%;
   transform: translate(-50%,-50%);
@@ -1041,9 +1041,25 @@ font-weight: bolder;
   .modal-content {
     width: 100%;
   }
+  .modal{
+    height: 40%;
+  }
   .span-close {
-    top: 2rem;
+    top: 1rem;
+
     padding-right: 4rem;
+  }
+}
+@media  (max-width:500px) {
+  .span-close{
+    position: absolute;
+    top: -10%;
+    left: 65%;
+    width: .5rem;
+    height: .5rem;
+  }
+  .mdi-close{
+    width: .4rem;
   }
 }
 

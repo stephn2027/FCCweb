@@ -33,7 +33,9 @@
  </head>
   <body>
     <header>
+      <nav id="navbar"></nav>
       <section class="welcome" id="welcome-section">
+        <h1>H</h1>
         <div id="container" touch-action="none"></div>
         <div class="container container--header">
             
@@ -91,12 +93,12 @@
                   </ul>
                 </li>
                 <li>
-                  <a href="">OTHER LINKS</a>
+                  <a id="profile-link" href="https://github.com/stephn2027/" target="_blank">OTHER LINKS </a>
                   <ul class="dropdown other-links">
                     <li><a class="profile-link on-hover--50" href="https://www.facebook.com/stephenuy.27/">Facebook</a>
                     </li>
-                    <li>
-                      <a class="profile-link on-hover--50" href="https://github.com/stephn2027/">GitHub</a>
+                    <li id="profile-link">
+                      <a class="profile-link on-hover--50"  href="https://github.com/stephn2027/" >GitHub</a>
                     </li>
                     <li>
                       <a class="profile-link on-hover--50" href="https://www.linkedin.com/in/stephen-uy-90268a209/">linkedIn</a>
@@ -173,7 +175,7 @@
        </section>
 
       <section class="project-section container" id="projects">
-       <div class="proj-cont">
+       <div class="proj-cont project-tile">
         <div class="projects-header waypoint" data-animation="slide-in-left">PROJECTS</div>
         <div class="projects-header-bar waypoint" data-animation="slide-in-right" data-delay=".25s"></div>
       </div>
@@ -267,7 +269,7 @@
           <div class="success">
             <div>
               Your message was successfuly sent. Thanks!
-              <span id="close" class="mdi mdi-close"></span>
+              <span id="close" class="mdimdi-close"></span>
             </div>
           </div>
           <input type="submit" class="submit-button" value="SUBMIT">

@@ -1,0 +1,14 @@
+{
+	"folders": [
+		{
+			"path": "../myProjects"
+		},
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"git.ignoreLimitWarning": true,
+		"liveServer.settings.multiRootWorkspaceName": "porfolio"
+	}
+}

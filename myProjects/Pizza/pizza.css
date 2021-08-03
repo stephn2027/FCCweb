@@ -2,6 +2,7 @@ html {
   box-sizing: border-box;
   background: url('wallpaperflare.com_wallpaper.jpg') no-repeat;
   background-size: cover;
+  background-position: center;
   min-height: 100vh;
   display: flex;
   justify-content: center;
@@ -11,6 +12,13 @@ html {
   text-decoration-color: lightgoldenrodyellow;
   color: darkgoldenrod;
   
+}
+main{
+  position: absolute;
+  top:10%;
+  left: 40%;
+  margin: 0 auto;
+  padding-inline: 3rem;
 }
 svg {
   display: flexbox;
@@ -50,6 +58,7 @@ svg {
   background: rgba(255, 253, 253, 0.94);
   box-shadow:0 0 0 10px rgba(0 0 0 / 10%);
   max-width: 350px;
+  justify-items: center;
 }
 h2{
   text-align: center;

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Text 🔃 Speech</title>
+</head>
+<body>
+    <header></header>
+     <main>
+         <div id="app-container">
+            <section class="title">
+                <h1>Speech to Text</h1>
+                <h3><-vice versa-></h3>
+            </section>
+            <section id="choices">
+                <select name="voices">
+                    <option value="">Select a voice</option>
+                </select>
+                <div class="group-range">
+                    <label for="rate">Rate:</label>
+                    <input type="range" name="rate" min="0.3" max="3" value="1" step=".1">
+                </div>
+                <div class="group-range">
+                <label for="pitch">Pitch:</label>
+                <input type="range" name="pitch" min="0.3" max="3" value="1" step=".1">
+                </div>
+
+            </section>
+            <section id="text-field">
+                <textarea name="text" id="text-field" spellcheck="true" contenteditable="true" placeholder="Type something or speak up"></textarea>
+            </section>
+            <section class="buttons">
+                <button type="button" id='speak'>Speak</button>
+                <button type="button" id='stop-voice'>Stop Listening</button>
+                <button type="button" id='listen'>Listen to voice</button>
+                <button type="button" id='save'>Save text</button>
+            </section>
+         </div>
+    </main>
+
+
+<script src="speechRec.js">
+
+</script>
+</body>
+</html>

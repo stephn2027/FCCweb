@@ -29,11 +29,12 @@
 
     #background {
       /* background: linear-gradient(#f1e214, #eaf) no-repeat; */
-      background-image: url('https://imgur.com/iKaxcOh.jpeg') no-repeat;
-      justify-content: center;
-      align-items: center;
-      min-height: 100%;
-      max-height: max-content;
+      background: url('https://imgur.com/iKaxcOh.jpeg') no-repeat;
+      background-position: center;
+      background-size:100% 200vh;
+      
+     
+      
 
 
     }
@@ -43,7 +44,8 @@
       max-width: 500px;
       padding: 1rem 2rem 1rem 5rem;
       border-radius: 1rem;
-
+      height: 500px;
+      overflow:scroll;
       background: -webkit-gradient(linear, 0 0, 0 100%, from(#d9eaf3), color-stop(4%, #fff))0 4px;
       box-shadow: -10px 10px 0 rgba(129, 131, 0, 0.1);
       background-size: 100% 3rem;
@@ -64,7 +66,8 @@
       border: rgba(129, 131, 0, 0.2);
       width: 10rem;
       left: 4.7rem;
-      top: -40px;
+      top: -20px;
+      left:8rem;
       color: rgb(134, 10, 107);
       font-size: 2rem;
       font-weight: 300;
@@ -87,10 +90,10 @@
     #loader {
     position: fixed;
     width: 100%;
-    height: 100vh;
+    height: 50vh;
     z-index: 1;
     overflow: visible;
-    background: #fff url('https://imgur.com/ugSeqd0.gif') no-repeat center center;
+    background: url('https://imgur.com/ugSeqd0.gif') no-repeat center center;
 }
   </style>
 
@@ -155,7 +158,7 @@ document.addEventListener("DOMContentLoaded", function() {
     function changeBackground() {
       const htmlB = document.querySelector('#background');
 
-      htmlB.style.backgroundImage = "url('https://imgur.com/P2IZPLy.gif')";
+      htmlB.style.backgroundImage = url('https://imgur.com/P2IZPLy.gif');
       htmlB.style.transition = 'all 1s ease-in-out';
     }
 
@@ -167,6 +170,8 @@ document.addEventListener("DOMContentLoaded", function() {
       console.log(individualText);
       const uriContent = "data:application/octet-stream," + encodeURIComponent(individualText);
       const newWindow = window.open(uriContent, 'newDocument');
+      words.innerHTML = "";
+      
     }
 
 

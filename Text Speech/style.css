@@ -92,6 +92,7 @@ textarea{
     max-height: 50rem;
     font-size: 1.3rem;
     padding:2rem;
+    overflow:scroll;
 }
 section.buttons{
     display: block;
@@ -122,4 +123,9 @@ section button:active{
     top:2px;
     transition: all .5s;
 }
+button#speak.active{
+    top:4px;
+    background-color: rgba(211, 210, 210, 0.787)
+}
+
 

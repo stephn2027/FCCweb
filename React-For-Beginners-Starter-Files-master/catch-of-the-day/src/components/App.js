@@ -1,15 +1,27 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Header from './Header';
 import Inventory from './Inventory';
 import Order from './Order';
 import sampleFishes from '../sample-fishes';
 import Fish from './Fish';
+import base from '../base';
+
 class App extends React.Component {
   state = {
     fishes: {},
     orders: {},
   };
-
+  componentDidMount(){
+      const { params } = this.props.match
+      this.ref = base.syncState(`${params.storeId}/fishes`,{
+          context: this,
+          state: 'fishes',
+      });
+  }
+  //to avoid performance issues by listening for changes in the componentdidmount function evrytime the client changes store,we can use componentwillunmount
+ componentWillUnmount(){
+  base.removeBinding(this.ref);
+ };
   addFish = (fish) => {
     //steps to update a state
     //1. taking a copy of the existing state to avoid mutation(changing the original state can cause bugs and performance issues);
@@ -22,6 +34,8 @@ class App extends React.Component {
       fishes,
     });
   };
+
+
 
   loadSampleFishes = (fishes) => {
     this.setState({

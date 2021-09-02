@@ -24,15 +24,16 @@ const Login = (props) => (
     <button
       className="twitter"
       onClick={() => 
-        props.authenticate("Twitter")
+        props.authenticate("Google")
       }
     >
-      Log In with Twitter
+      Log In with Google
     </button>
     
 
   </nav>
 );
+
 Login.propTypes={
     authenticate:PropTypes.func.isRequired,
 };

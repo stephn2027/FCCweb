@@ -418,9 +418,6 @@ ul.order li span.count {
 ul.order li span.count span {
   display: inline-block;
 }
-button.delete-order{
-  margin-left: 3rem;
-}
 .total {
   padding: 2rem 0;
   font-size: 1.4rem;
@@ -429,7 +426,6 @@ button.delete-order{
 }
 .total strong {
   float: right;
-  color: #470509;
 }
 .order-title {
   text-align: center;

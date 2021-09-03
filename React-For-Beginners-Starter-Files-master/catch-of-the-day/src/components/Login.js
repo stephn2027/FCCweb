@@ -1,5 +1,6 @@
 import React from "react";
-import PropTypes from "prop-types"
+import PropTypes from "prop-types";
+
 
 const Login = (props) => (
   <nav className="login">
@@ -27,7 +28,7 @@ const Login = (props) => (
         props.authenticate("Google")
       }
     >
-      Log In with Google
+       Sign in with Google
     </button>
     
 

@@ -7,6 +7,7 @@ import EditFishForm from "./EditFishForm";
 import Login from "./Login";
 import base, { firebaseApp } from "../base";
 
+
 class Inventory extends React.Component {
   static propTypes = {
     fishes: PropTypes.object.isRequired,
@@ -57,6 +58,7 @@ class Inventory extends React.Component {
     this.setState({ uid:null });
     
   };
+    
 
   render() {
      

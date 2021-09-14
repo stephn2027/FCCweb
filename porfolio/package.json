@@ -13,6 +13,14 @@
   },
   "dependencies": {
     "@mdi/font": "^5.9.55",
-    "emailjs-com": "^3.2.0"
+    "css-loader": "^6.2.0",
+    "emailjs-com": "^3.2.0",
+    "link": "^0.1.5",
+    "netlify": "^8.0.0",
+    "script-loader": "^0.7.2",
+    "style-loader": "^3.2.1",
+    "webpack": "^5.52.1",
+    "webpack-cli": "^4.8.0",
+    "webpack-dev-server": "^4.2.1"
   }
 }
